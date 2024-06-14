@@ -1,7 +1,14 @@
+import TicketCard from "@/components/TicketCard";
+
 export default function Home() {
   return (
-    <>
-      <p>home page</p>
-    </>
+    <div className="p-5">
+      <div className="lg:grid grid-cols-2 xl:grid-cols-4 sm:grid-rows-1">
+        <TicketCard />
+        <TicketCard />
+        <TicketCard />
+        <TicketCard />
+      </div>
+    </div>
   );
 }
