@@ -1,7 +1,9 @@
+import TicketForm from "@/components/TicketForm";
+
 export default function NewTicket() {
   return (
     <>
-      <p>new ticket</p>
+      <TicketForm />
     </>
   );
 }
