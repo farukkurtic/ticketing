@@ -11,8 +11,8 @@ export default function TicketForm() {
     description: "",
     priority: 1,
     progress: 0,
-    status: "not started",
-    category: "Hardware problem",
+    status: "not-started",
+    category: "Hardware Problem",
   };
 
   const handleChange = (e) => {
@@ -28,8 +28,8 @@ export default function TicketForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    const res = await fetch("/api/tickets/", {
+    const res = await fetch("/api/tickets", {
+      // if the component is client-side there is no need for full url
       method: "POST",
       body: JSON.stringify({ formData }),
       headers: {
@@ -145,8 +145,8 @@ export default function TicketForm() {
 
         <label>Status</label>
         <select name="status" value={formData.status} onChange={handleChange}>
-          <option value="not started">Not Started</option>
-          <option value="in progress">In Progress</option>
+          <option value="not-started">Not Started</option>
+          <option value="in-progress">In Progress</option>
           <option value="done">Done</option>
         </select>
 
