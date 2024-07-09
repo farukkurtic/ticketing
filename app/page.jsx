@@ -60,6 +60,7 @@ export default async function Home() {
                     time={formattedDate}
                     priority={ticket.priority}
                     idd={ticket._id}
+                    progress={ticket.progress}
                   />
                 );
               })}

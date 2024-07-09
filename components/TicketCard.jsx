@@ -13,6 +13,7 @@ export default function TicketCard({
   status,
   category,
   time,
+  progress,
 }) {
   return (
     <div className="flex flex-col bg-card hover:bg-card-hover rounded-md shadow-lg p-3 m-2">
@@ -23,13 +24,13 @@ export default function TicketCard({
         </div>
       </div>
       <Link key={idd} href={`/all-tickets/${idd}`}>
-        <h1>{title}</h1>
+        <h1 className="pb-1">{title}</h1>
         <hr className="h-px border-0 bg-page mb-2" />
         <p className="whitespace-pre-wrap">{description}</p>
         <div className="flex mt-2">
           <div className="flex flex-col">
             <p className="text-xs my-1">{time}</p>
-            <ProgressBar />
+            <ProgressBar percentage={progress} />
           </div>
           <div className="ml-auto flex items-end">
             <StatusDisplay status={`bg-${status}`} />
