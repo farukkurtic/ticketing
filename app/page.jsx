@@ -36,6 +36,10 @@ export default async function Home() {
           (ticket) => ticket.category === category.categoryName
         );
 
+        const softwareProblems = filteredCategories[0];
+        const hardwareProblems = filteredCategories[1];
+        const project = filteredCategories[2];
+
         return (
           <div key={category.categoryName}>
             <h2>{category.categoryName}</h2>
